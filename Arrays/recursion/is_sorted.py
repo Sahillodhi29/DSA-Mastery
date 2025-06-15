@@ -3,7 +3,7 @@ def is_sorted(arr, index):
         
         return True
     
-    if arr[index] < arr[index-1]:
+    if arr[index] > arr[index + 1]:
         
         return False
     
@@ -11,7 +11,7 @@ def is_sorted(arr, index):
 
 
 arr = [1, 2, 3, 5]
-index = len(arr) - 1
+index = 0
 
 if is_sorted(arr,index):
     print("Sorted")

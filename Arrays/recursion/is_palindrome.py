@@ -7,7 +7,7 @@ def is_palindrome(s):
     return False
     
 
-s= "racepcar"
+s= "racecar"
 
 print(is_palindrome(s))
 

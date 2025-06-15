@@ -27,19 +27,19 @@ target = 2
 
 def firstlastidx(arr, index, first, last, target):
     if index == len(arr):
-        return (first, last)
+        return(first,last)
     
     if arr[index] == target:
         if first == -1:
             first = index
         last = index
-    
+        
     return firstlastidx(arr, index+1, first, last, target)
 
-first , last = firstlastidx(arr,index , first, last, target)
+first, last = firstlastidx(arr, index, first, last, target)
 
-print("First index:", first)
-print("Last index:", last)
+print("First Index: ",first)
+print("Last Index: ",last)
     
     
     

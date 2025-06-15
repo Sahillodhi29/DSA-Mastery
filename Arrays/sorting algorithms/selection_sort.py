@@ -10,9 +10,9 @@ def selection_sort(arr):
             if arr[j] < arr[min_index]:
                 min_index = j
         
-        arr[i],arr[min_index]=arr[min_index],arr[i]   
+        arr[min_index], arr[i] = arr[i], arr[min_index]
         
-        print("After pass", i + 1, ":", arr)
+        print("after pass",i,": ",arr)
 
 
 arr=[7, 4, 10, 8, 3, 1]

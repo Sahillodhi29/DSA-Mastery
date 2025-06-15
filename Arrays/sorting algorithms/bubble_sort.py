@@ -2,13 +2,13 @@
 
 
 def bubble_sort(arr):
-    n = len(arr)
+    n = len(arr)   
     
     for i in range(n-1):
-        for j in range(n-i-1):
+        for j in range(n-1-i):
             if arr[j] > arr[j+1]:
-                 arr[j], arr[j+1] =  arr[j+1], arr[j] 
-    return arr             
+                arr[j+1],arr[j] = arr[j], arr[j+1] 
+    return arr
                  
 arr=[10, 2, 7, 5]
 
@@ -54,20 +54,18 @@ def optimized_bubble_sort(arr):
     
     for i in range(n-1):
         swapped = False
-        for j in range(n-i-1):
+        for j in range(n-1-i):
             if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] =  arr[j+1], arr[j]
+                arr[j], arr[j+1] =  arr[j+1], arr[j] 
                 swapped = True
-            
-                 
-                 
-        print("After pass ",i+1,": ",arr)  
-        
+        print("After pass ",i+1,": ",arr)
+    
         if not swapped:
-            print("No swaps in this pass, array is sorted early.")
-            break       
+            print("arr is already sorted now!")
+            break
+        
                  
 arr=[10, 2, 7, 5 , 6]
                     
-print(optimized_bubble_sort(arr))
+(optimized_bubble_sort(arr))
     

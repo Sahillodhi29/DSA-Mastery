@@ -1,6 +1,11 @@
-def reverse_number(n):
+def reverse_helper(n, result):
     if n == 0:
-        return
-    print(n % 10, end="") 
-    reverse_number(n//10)
-reverse_number(1234)
+        return result
+    return reverse_helper(n // 10, result * 10 + n % 10)
+
+def reverse_number(n):
+    return reverse_helper(n, 0)
+
+# Test
+print(reverse_number(1234))  # Output: 4321
+print(reverse_number(100))   # Output: 1
