@@ -129,3 +129,23 @@ arr = [2, 4, 4, 4, 6, 8]
 target = 4
 
 print(first_last_occ(arr, target))
+
+
+
+
+# count number of 0s and 1s
+
+def count_0n1(arr):
+    count_0 = 0
+    count_1 = 0
+
+    for num in arr:
+        if num == 0:
+            count_0 += 1
+        elif num == 1:
+            count_1 += 1
+
+    return count_0, count_1
+
+arr = [0, 1, 1, 0, 0, 1, 1]
+print(count_0n1(arr))
