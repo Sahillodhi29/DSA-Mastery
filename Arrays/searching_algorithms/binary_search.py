@@ -86,3 +86,46 @@ arr = [2, 4, 4, 4, 6, 8]
 target = 4
 
 print(binary_search_last_occurrence(arr, target))
+
+
+
+# first and last both 
+
+def first_last_occ(arr, target):
+    def find_first(arr, target):
+        start, end = 0, len(arr) - 1
+        first = -1
+        while start <= end:
+            mid = (start + end) // 2
+            if arr[mid] == target:
+                first = mid
+                end = mid - 1  # move left
+            elif arr[mid] < target:
+                start = mid + 1
+            else:
+                end = mid - 1
+        return first
+
+    def find_last(arr, target):
+        start, end = 0, len(arr) - 1
+        last = -1
+        while start <= end:
+            mid = (start + end) // 2
+            if arr[mid] == target:
+                last = mid
+                start = mid + 1  # move right
+            elif arr[mid] < target:
+                start = mid + 1
+            else:
+                end = mid - 1
+        return last
+
+    first = find_first(arr, target)
+    last = find_last(arr, target)
+
+    return [first, last]
+
+arr = [2, 4, 4, 4, 6, 8]
+target = 4
+
+print(first_last_occ(arr, target))
